@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lI8-88-BFB">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Mortgage Calculator-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MortgageCalculatorViewController" customModule="MortgageCalculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="b4t-L0-zxg">
+                                <rect key="frame" x="20" y="150" width="374" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Per Month:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G5e-To-lZY">
+                                        <rect key="frame" x="0.0" y="0.0" width="152.33333333333334" height="50"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lGO-sX-mQm">
+                                        <rect key="frame" x="324" y="0.0" width="50" height="50"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="fTo-xe-L4a">
+                                <rect key="frame" x="15" y="220.00000000000003" width="384" height="435.66666666666674"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home Purchase Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bQs-xd-gKX">
+                                        <rect key="frame" x="0.0" y="0.0" width="384" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="doE-Y8-ZRE">
+                                        <rect key="frame" x="0.0" y="40.333333333333314" width="384" height="30"/>
+                                        <subviews>
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1000000" translatesAutoresizingMaskIntoConstraints="NO" id="Qzt-Nl-QMW">
+                                                <rect key="frame" x="-2" y="0.0" width="303.33333333333331" height="31"/>
+                                                <connections>
+                                                    <action selector="amountSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="Zpb-Pi-XqO"/>
+                                                </connections>
+                                            </slider>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1000000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rlr-l1-d2f">
+                                                <rect key="frame" x="314.33333333333331" y="0.0" width="69.666666666666686" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Down Payment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tux-hc-mAV">
+                                        <rect key="frame" x="0.0" y="90.333333333333314" width="384" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="KCX-At-Jun">
+                                        <rect key="frame" x="0.0" y="130.66666666666669" width="384" height="30"/>
+                                        <subviews>
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="rX9-3R-0SI">
+                                                <rect key="frame" x="-2" y="0.0" width="359" height="31"/>
+                                                <connections>
+                                                    <action selector="downPaymentSliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="ehd-EH-qIJ"/>
+                                                </connections>
+                                            </slider>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kcS-eY-PYq">
+                                                <rect key="frame" x="370" y="0.0" width="14" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Interest Rate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iwp-7I-kd4">
+                                        <rect key="frame" x="0.0" y="180.66666666666669" width="384" height="20.333333333333343"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="khr-tO-j4b">
+                                        <rect key="frame" x="0.0" y="221" width="384" height="30"/>
+                                        <subviews>
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="6" translatesAutoresizingMaskIntoConstraints="NO" id="jd6-1P-tbF">
+                                                <rect key="frame" x="-2" y="0.0" width="359" height="31"/>
+                                                <connections>
+                                                    <action selector="interestPercetangeSliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="2l0-6X-TXV"/>
+                                                </connections>
+                                            </slider>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IYB-A3-Bab">
+                                                <rect key="frame" x="370" y="0.0" width="14" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loan Term" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cS1-lr-tJg">
+                                        <rect key="frame" x="0.0" y="271" width="384" height="20.333333333333314"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="SYk-au-UY7">
+                                        <rect key="frame" x="0.0" y="311.33333333333337" width="384" height="30"/>
+                                        <subviews>
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="30" translatesAutoresizingMaskIntoConstraints="NO" id="99A-WX-Vp9">
+                                                <rect key="frame" x="-2" y="0.0" width="330.66666666666669" height="31"/>
+                                                <connections>
+                                                    <action selector="termSliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="mDr-yH-euN"/>
+                                                </connections>
+                                            </slider>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Years" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EaS-ip-fem">
+                                                <rect key="frame" x="341.66666666666669" y="0.0" width="42.333333333333314" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Optional:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rT2-zy-r3y">
+                                        <rect key="frame" x="0.0" y="361.33333333333337" width="384" height="20.333333333333314"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Home Address: 123 Fake St Chicago, IL 60606" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="33a-lQ-EDU">
+                                        <rect key="frame" x="0.0" y="401.66666666666663" width="384" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tKC-NG-K1a">
+                                <rect key="frame" x="140.66666666666666" y="670.66666666666663" width="132.99999999999997" height="48"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <state key="normal" title="Calculate"/>
+                                <connections>
+                                    <action selector="calculatePaymentTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1B9-jy-RJT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="b4t-L0-zxg" secondAttribute="trailing" constant="20" id="QKI-PG-OGN"/>
+                            <constraint firstItem="fTo-xe-L4a" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="TRA-IX-I52"/>
+                            <constraint firstItem="tKC-NG-K1a" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Yod-BP-rzM"/>
+                            <constraint firstItem="fTo-xe-L4a" firstAttribute="top" secondItem="b4t-L0-zxg" secondAttribute="bottom" constant="20" id="gtG-j2-TOL"/>
+                            <constraint firstItem="b4t-L0-zxg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="m0W-jN-EkR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fTo-xe-L4a" secondAttribute="trailing" constant="15" id="pMW-AO-Wvl"/>
+                            <constraint firstItem="b4t-L0-zxg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="q5x-Lc-wco"/>
+                            <constraint firstItem="tKC-NG-K1a" firstAttribute="top" secondItem="fTo-xe-L4a" secondAttribute="bottom" constant="15" id="rAK-qA-KPA"/>
+                            <constraint firstItem="fTo-xe-L4a" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="uTD-wM-sNR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Mortgage Calculator" id="cL9-oN-dTC">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Zzn-kL-Vxb">
+                            <connections>
+                                <action selector="saveButtonPressed:" destination="BYZ-38-t0r" id="ndu-Rr-YaT"/>
+                                <segue destination="6ZE-jW-i2N" kind="show" identifier="ToSavedHomes" id="BTo-SP-sk8"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="addressTextField" destination="33a-lQ-EDU" id="Ufy-B7-OOf"/>
+                        <outlet property="calculatePaymentOutlet" destination="tKC-NG-K1a" id="JIh-qa-cXr"/>
+                        <outlet property="downPaymentLabel" destination="tux-hc-mAV" id="uey-E0-aXl"/>
+                        <outlet property="downPaymentPercentageLabel" destination="kcS-eY-PYq" id="1FX-Hp-ABz"/>
+                        <outlet property="downPaymentSlider" destination="rX9-3R-0SI" id="W3C-q3-onE"/>
+                        <outlet property="homePriceLabel" destination="rlr-l1-d2f" id="HK7-ic-2QK"/>
+                        <outlet property="homePurchasePrice" destination="bQs-xd-gKX" id="Tt1-yB-EKz"/>
+                        <outlet property="interestPercentageLabel" destination="IYB-A3-Bab" id="jeP-JV-CVF"/>
+                        <outlet property="interestPercentageSlider" destination="jd6-1P-tbF" id="Mp2-dB-kxO"/>
+                        <outlet property="interestRateLabel" destination="iwp-7I-kd4" id="snf-MV-kn8"/>
+                        <outlet property="monthlyPaymentLabel" destination="lGO-sX-mQm" id="Fhc-6a-HZJ"/>
+                        <outlet property="priceSlider" destination="Qzt-Nl-QMW" id="FLe-HW-vhh"/>
+                        <outlet property="termAmountLabel" destination="EaS-ip-fem" id="XVQ-vk-Wfq"/>
+                        <outlet property="termSignLabel" destination="cS1-lr-tJg" id="E7z-fj-qef"/>
+                        <outlet property="termSlider" destination="99A-WX-Vp9" id="UHY-hM-0yb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="828" y="118"/>
+        </scene>
+        <!--Saved Homes-->
+        <scene sceneID="4oC-jx-AEk">
+            <objects>
+                <tableViewController id="6ZE-jW-i2N" customClass="HomeTableViewController" customModule="MortgageCalculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="82G-jy-FsE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HomeCell" textLabel="i1g-au-uq7" detailTextLabel="bZf-72-dqn" style="IBUITableViewCellStyleSubtitle" id="Z2F-ub-IOb">
+                                <rect key="frame" x="0.0" y="28" width="414" height="55.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Z2F-ub-IOb" id="a8d-E7-ETA">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="55.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="i1g-au-uq7">
+                                            <rect key="frame" x="20.000000000000004" y="8.9999999999999982" width="33.333333333333336" height="20.333333333333332"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bZf-72-dqn">
+                                            <rect key="frame" x="19.999999999999996" y="31.333333333333332" width="43.666666666666664" height="14.333333333333334"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="IAE-a7-pks" kind="show" identifier="ToDetail" id="4Gr-rh-qNK"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="6ZE-jW-i2N" id="zEB-Es-cyX"/>
+                            <outlet property="delegate" destination="6ZE-jW-i2N" id="avk-II-fND"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Saved Homes" id="uAA-Xt-uov"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dd1-Lj-iwe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1542" y="118"/>
+        </scene>
+        <!--Home Detail-->
+        <scene sceneID="z4v-kA-yPR">
+            <objects>
+                <viewController id="IAE-a7-pks" customClass="HomeDetailViewController" customModule="MortgageCalculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9NT-q7-kiq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="vLT-p9-cHn">
+                                <rect key="frame" x="50" y="190" width="314" height="313"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="vLT-p9-cHn" secondAttribute="height" multiplier="1:1" constant="1" id="uqb-Rq-d8s"/>
+                                </constraints>
+                            </mapView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="j8D-3K-To0">
+                                <rect key="frame" x="50" y="523" width="314" height="113.66666666666663"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dcb-8r-k6P">
+                                        <rect key="frame" x="0.0" y="0.0" width="314" height="33"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="Open in Maps"/>
+                                        <connections>
+                                            <action selector="openInMapsButtonPressed:" destination="IAE-a7-pks" eventType="touchUpInside" id="UtX-ko-dFi"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address:" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uM0-jx-T86">
+                                        <rect key="frame" x="0.0" y="53" width="314" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="irc-c0-VVi">
+                                        <rect key="frame" x="0.0" y="83.333333333333371" width="314" height="0.0"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loan Amount p/m:" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S6n-c0-U6k">
+                                        <rect key="frame" x="0.0" y="93.333333333333371" width="314" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="vLT-p9-cHn" firstAttribute="centerX" secondItem="lbD-kq-Eeb" secondAttribute="centerX" id="0iY-ZM-Ldo"/>
+                            <constraint firstItem="j8D-3K-To0" firstAttribute="trailing" secondItem="vLT-p9-cHn" secondAttribute="trailing" id="4pA-Pi-68u"/>
+                            <constraint firstItem="j8D-3K-To0" firstAttribute="leading" secondItem="vLT-p9-cHn" secondAttribute="leading" id="PpL-U8-Tvm"/>
+                            <constraint firstItem="j8D-3K-To0" firstAttribute="top" secondItem="vLT-p9-cHn" secondAttribute="bottom" constant="20" id="S88-Rr-SDW"/>
+                            <constraint firstItem="vLT-p9-cHn" firstAttribute="leading" secondItem="lbD-kq-Eeb" secondAttribute="leading" constant="50" id="Uoa-1M-z5H"/>
+                            <constraint firstItem="vLT-p9-cHn" firstAttribute="top" secondItem="lbD-kq-Eeb" secondAttribute="top" constant="50" id="wFB-RY-6RR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="lbD-kq-Eeb"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Home Detail" id="Jcb-8m-gy4"/>
+                    <connections>
+                        <outlet property="homeAddressLabel" destination="uM0-jx-T86" id="WRG-df-Q2T"/>
+                        <outlet property="homeMonthlyPaymentLabel" destination="S6n-c0-U6k" id="H8Y-0y-8dc"/>
+                        <outlet property="homePriceLabel" destination="irc-c0-VVi" id="alW-oc-dO0"/>
+                        <outlet property="mapView" destination="vLT-p9-cHn" id="gcR-jp-i6P"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uaI-50-Hhd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2271" y="117"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="hzG-CG-tFI">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lI8-88-BFB" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="s17-6b-Ijh">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Lsa-nH-ChI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JjT-p6-tC8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="118.52678571428571"/>
+        </scene>
+    </scenes>
+</document>
